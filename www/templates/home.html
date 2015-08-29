@@ -2,53 +2,31 @@
     <div class="title">Infra Scrum</div>
 </ion-header-bar>
 <ion-content>
+
 	<div class="row">
-		<div class="col" ng-click="getFullPage('1')">
-	  		<img src="img/1.png" width="100%" height="auto">
-		</div>
-		<div class="col" ng-click="getFullPage('2')">
-		 	<img src="img/2.png" width="100%" height="auto">
-		</div>
-		<div class="col" ng-click="getFullPage('4')">
-		 	<img src="img/4.png" width="100%" height="auto">
-		</div>
-		<div class="col" ng-click="getFullPage('8')">
-			<img src="img/8.png" width="100%" height="auto">
-		</div>
-	</div>
-	<div class="row">
-		<div class="col" ng-click="getFullPage('2d')">
-			<img src="img/2d.png" width="100%" height="auto">
-		</div>
-		<div class="col" ng-click="getFullPage('5d')">
-		  	<img src="img/5d.png" width="100%" height="auto">
-		</div>
-		<div class="col" ng-click="getFullPage('10d')">
-		  	<img src="img/10d.png" width="100%" height="auto">
+		<div class="col"ng-repeat="hour in hours" ng-click="getFullPage('{{hour}}')">
+	  		<img src="img/{{hour}}.png" width="100%" height="auto">
 		</div>		
 	</div>
+
 	<div class="row">
-		<div class="col" ng-click="getFullPage('1M')">
-		    1M		  
-		</div>
-		<div class="col" ng-click="getFullPage('2M')">
-		    2M		  
-		</div>
-		<div class="col" ng-click="getFullPage('3M')">
-		    3M		  
+		<div class="col"ng-repeat="day in days" ng-click="getFullPage('{{day}}')">
+	  		<img src="img/{{day}}.png" width="100%" height="auto">
 		</div>		
-		<div class="col" ng-click="getFullPage('6M')">
-		    6M
-		</div>
 	</div>
+
 	<div class="row">
-		<div class="col col-50" ng-click="getFullPage('cafe-java')">		  
-		    <img src="img/cafe-java.png" width="100%" height="auto">
-		</div>
-		<div class="col col-50" ng-click="getFullPage('cafe-java')">
-		    # VAMU ...		  
-		</div>
+		<div class="col"ng-repeat="month in months" ng-click="getFullPage('{{month}}')">
+	  		<img src="img/{{month}}.png" width="100%" height="auto">
+		</div>		
 	</div>
+
+
+	<div class="row">
+		<div class="col"ng-repeat="other in others" ng-click="getFullPage('{{other}}')">
+	  		<img src="img/{{other}}.png" width="100%" height="auto">
+		</div>		
+	</div>	
 </ion-content>
 
 <ion-footer-bar align-title="center" class="bar-dark">
