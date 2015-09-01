@@ -2,7 +2,7 @@ app.controller('infracommerceController', function ($scope, $state,$stateParams,
     
 
 	$scope.hours = ["1H","2H","4H","8H"];
-	$scope.days = ["2d","5d","10d"];
+	$scope.days = ["2D","3D","5D","10D"];
 	$scope.months = ["1M","2M","3M","6M"];
 	$scope.others = ["cafe","vamu"];
 
