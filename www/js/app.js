@@ -1,10 +1,4 @@
-// Ionic Starter App
-
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-
-var app = angular.module('infracommerceApp', ['ionic'])
+var app = angular.module('infraScrumApp', ['ionic'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -24,13 +18,13 @@ app.config(function($stateProvider) {
 
   .state('home', {
       url: '',
-      controller: 'infracommerceController',
-      templateUrl: 'templates/home.html'      
+      controller: 'homeController',
+      templateUrl: 'pages/home.html'      
     })
 	  .state('full', {
-	    url: '/full:choice',
-	    controller: 'infracommerceController',
-      templateUrl: 'templates/full.html'
+	    url: '/full:choice?tapOption',
+	    controller: 'fullController',
+      templateUrl: 'pages/full.html'
 
 	  });
 });
