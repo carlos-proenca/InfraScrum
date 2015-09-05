@@ -19,12 +19,12 @@ app.config(function($stateProvider) {
   .state('home', {
       url: '',
       controller: 'homeController',
-      templateUrl: 'pages/home.html'      
+      templateUrl: 'pages/home.html'        
     })
 	  .state('full', {
 	    url: '/full:choice?tapOption',
 	    controller: 'fullController',
-      templateUrl: 'pages/full.html'
-
+      templateUrl: 'pages/full.html',
+      cache: false
 	  });
 });
