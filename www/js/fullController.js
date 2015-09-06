@@ -7,7 +7,7 @@ app.controller('fullController', function ($rootScope, $scope, $state, $statePar
 
 		$scope.choice = $stateParams.choice;
    		
-   		if($stateParams.tapOption == "true"){
+   		if($stateParams.tapOption == "true" && $scope.choice != "vamu" && $scope.choice != "cafe" ){
    			$scope.showBackCard = true;
    			$scope.showOption = false;
    		}else{
