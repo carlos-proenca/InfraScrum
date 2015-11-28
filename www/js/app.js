@@ -10,6 +10,15 @@ var app = angular.module('infraScrumApp', ['ionic'])
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+
+     //Disable back button
+    document.addEventListener('backbutton', function(event) {
+        return false; 
+    });
+
+    //Disable sleepy screen
+    cordova.screenDim.disable();
+
   });
 })
 
