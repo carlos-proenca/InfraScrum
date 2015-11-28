@@ -7,6 +7,7 @@ var app = angular.module('infraScrumApp', ['ionic'])
     if(window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }
+
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
@@ -19,7 +20,7 @@ var app = angular.module('infraScrumApp', ['ionic'])
     //Disable sleepy screen
     cordova.screenDim.disable();
 
-  });
+    });   
 })
 
 app.config(function($stateProvider) {
@@ -28,7 +29,8 @@ app.config(function($stateProvider) {
   .state('home', {
       url: '',
       controller: 'homeController',
-      templateUrl: 'pages/home.html'        
+      templateUrl: 'pages/home.html',
+      cache: false      
     })
 	  .state('full', {
 	    url: '/full:choice?tapOption',
