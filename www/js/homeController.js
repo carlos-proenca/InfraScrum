@@ -5,8 +5,15 @@ app.controller('homeController', function ($scope, $state, $stateParams, $window
 	$scope.months = ["1M","2M","3M","6M"];
 	$scope.others = ["cafe","vamu"];
 
+	$scope.init = function(){
+		$scope.tapOption = [];
+		$scope.tapOption.push(angular.fromJson(localStorage.getItem("tapOption")));
+	}
+	
+	$scope.init();
+	
     $scope.getFullPage = function(choiceText){    	
-    	$state.go("full",{"choice":choiceText, "tapOption":$scope.tapOption});
+    	$state.go("full",{"choice":choiceText, "tapOption":$scope.tapOption[0].checked});
     }
 
 	$scope.toggleLeft =  function(){
@@ -14,6 +21,9 @@ app.controller('homeController', function ($scope, $state, $stateParams, $window
 	}
 
 	$scope.changeTapOption =  function(opt){			
-		$scope.tapOption = opt.tapOption;
+		var tap = {};
+		tap.text = opt.text;
+		tap.checked = opt.checked;
+		localStorage.setItem("tapOption",  JSON.stringify(tap));
 	}
 });

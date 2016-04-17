@@ -1,8 +1,16 @@
 	<ion-side-menus>
 		<ion-side-menu-content>
 			<ion-header-bar align-title="center" class="bar-dark">
+			
 			    <div class="buttons">
-			    	<button class="button icon button-clear ion-navicon-round" ng-click="toggleLeft()"></button>
+			    	<button class="button icon button-clear ion-navicon-round" 
+			    	ng-click="toggleLeft()"></button>
+			    	<!-- <label class="toggle">
+					   <input type="checkbox">
+					   <div class="track">
+					     <div class="handle"></div>
+					   </div>
+					</label> -->
 			    </div>
 			    <div class="title">Infra Scrum</div>
 			</ion-header-bar>
@@ -37,7 +45,15 @@
 			</ion-footer-bar>
 
 		</ion-side-menu-content>
-		<ion-side-menu side="left">
-			<ion-toggle toggle-class="toggle-calm" ng-model="tapOption" ng-click="changeTapOption(this)">Tap to Show</ion-toggle>
+		<ion-side-menu side="left">		
+			<!-- <ion-toggle toggle-class="toggle-calm" ng-model="tapOption" ng-checked="tapOption" ng-click="changeTapOption(this)">Tap to Show</ion-toggle>
+		     -->
+		  <ion-toggle ng-repeat="item in tapOption"
+                    ng-model="item.checked" 
+                    ng-checked="item.checked"
+                    ng-click="changeTapOption(item)">
+          {{ item.text }}
+        </ion-toggle>        
+        
 		</ion-side-menu>
 	</ion-side-menus>
