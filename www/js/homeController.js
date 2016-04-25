@@ -6,14 +6,13 @@ app.controller('homeController', function ($scope, $state, $stateParams, $window
 	$scope.others = ["cafe","vamu"];
 
 	$scope.init = function(){
-		$scope.tapOption = [];
-		$scope.tapOption.push(angular.fromJson(localStorage.getItem("tapOption")));
+		$scope.tapOption = angular.fromJson(localStorage.getItem("tapOption")));
 	}
 	
 	$scope.init();
 	
     $scope.getFullPage = function(choiceText){    	
-    	$state.go("full",{"choice":choiceText, "tapOption":$scope.tapOption[0].checked});
+    	$state.go("full",{"choice":choiceText, "tapOption":$scope.tapOption.checked});
     }
 
 	$scope.toggleLeft =  function(){

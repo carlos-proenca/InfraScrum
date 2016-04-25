@@ -46,14 +46,6 @@
 
 		</ion-side-menu-content>
 		<ion-side-menu side="left">		
-			<!-- <ion-toggle toggle-class="toggle-calm" ng-model="tapOption" ng-checked="tapOption" ng-click="changeTapOption(this)">Tap to Show</ion-toggle>
-		     -->
-		  <ion-toggle ng-repeat="item in tapOption"
-                    ng-model="item.checked" 
-                    ng-checked="item.checked"
-                    ng-click="changeTapOption(item)">
-          {{ item.text }}
-        </ion-toggle>        
-        
+			<ion-toggle toggle-class="toggle-calm" ng-model="tapOption.checked" ng-checked="tapOption.checked" ng-click="changeTapOption(this)">Tap to Show</ion-toggle>
 		</ion-side-menu>
 	</ion-side-menus>
