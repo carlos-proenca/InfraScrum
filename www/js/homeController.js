@@ -6,7 +6,7 @@ app.controller('homeController', function ($scope, $state, $stateParams, $window
 	$scope.others = ["cafe","vamu"];
 
 	$scope.init = function(){
-		$scope.tapOption = angular.fromJson(localStorage.getItem("tapOption")));
+		$scope.tapOption = angular.fromJson(localStorage.getItem("tapOption"));
 	}
 	
 	$scope.init();
